@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PIXELES | Café • Manga • Arcade</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="brand">
+      <h1 class="glitch-title">PIXELES</h1>
+      <span class="tagline">EXPERIENCIA INTEGRADA</span>
+    </div>
+    <div class="user-card-widget" id="card-widget-zone"></div>
+  </header>
+
+  <main class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <p class="hero-eyebrow">CAFÉ · MANGA · ARCADE</p>
+        <h2 class="hero-title">TRES MUNDOS,<br><span class="accent">UN SOLO LOCAL</span></h2>
+        <p class="hero-desc">
+          Pixeles es el punto de encuentro para quienes no quieren elegir entre un buen café,
+          una buena lectura y una buena partida. Sumate con tu tarjeta, acumulá puntos en cada
+          rincón del local y canjealos donde más te guste.
+        </p>
+      </div>
+      <div class="hero-stamp">
+        <span>ENTRADA<br>LIBRE Y<br>GRATUITA</span>
+      </div>
+    </div>
+  </main>
+
+  <div class="hub-grid">
+    <a href="cafe.html" class="hub-card hub-cafe">
+      <span class="hub-icon">☕</span>
+      <h3>CAFETERÍA</h3>
+      <p>Menú temático, combos y bebidas con onda gamer.</p>
+      <span class="hub-cta">ENTRAR →</span>
+    </a>
+
+    <a href="manga.html" class="hub-card hub-manga">
+      <span class="hub-icon">📖</span>
+      <h3>MANGA</h3>
+      <p>Lectura libre en sala o alquiler para llevar a casa.</p>
+      <span class="hub-cta">ENTRAR →</span>
+    </a>
+
+    <a href="arcade.html" class="hub-card hub-arcade">
+      <span class="hub-icon">🕹️</span>
+      <h3>ARCADE</h3>
+      <p>Fichas, partidas y recompensas con tu tarjeta de puntos.</p>
+      <span class="hub-cta">ENTRAR →</span>
+    </a>
+  </div>
+
+  <section class="map-section">
+    <div class="section-header">
+      <h2>MAPA DEL LOCAL</h2>
+      <p>Así se distribuye Pixeles: entrás, y elegís tu rincón</p>
+    </div>
+
+    <div class="map-inner">
+      <div class="floorplan-frame">
+        <div class="map3d-wrap">
+          <div id="map3d-mount" class="map3d-mount"></div>
+        </div>
+        <p class="map3d-hint">Arrastrá para girar el mapa, hacé scroll para acercarte, y tocá una zona para entrar directo a esa sección.</p>
+      </div>
+
+      <div class="map-legend">
+        <h4>RECORRIDO</h4>
+        <div class="legend-item">
+          <span class="legend-swatch" style="background:#D99B23;"></span>
+          <div>
+            <strong>Arcade</strong>
+            <p>Franja de máquinas sobre el lateral izquierdo del local.</p>
+          </div>
+        </div>
+        <div class="legend-item">
+          <span class="legend-swatch" style="background:#C97B92;"></span>
+          <div>
+            <strong>Biblioteca manga</strong>
+            <p>Ángulo superior derecho, con estanterías y mesas de lectura.</p>
+          </div>
+        </div>
+        <div class="legend-item">
+          <span class="legend-swatch" style="background:#0E7C7B;"></span>
+          <div>
+            <strong>Cafetería</strong>
+            <p>Ocupa el pasillo central y toda la franja inferior del salón.</p>
+          </div>
+        </div>
+        <div class="legend-item">
+          <span class="legend-swatch" style="background:#201B16;"></span>
+          <div>
+            <strong>Mostrador</strong>
+            <p>Pedidos, cobro, préstamos de manga y venta de fichas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>Una sola tarjeta, un solo saldo de puntos, para los tres rincones de Pixeles.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/renderers/CSS2DRenderer.js"></script>
+  <script src="common.js"></script>
+  <script src="map3d.js"></script>
+</body>
+</html>

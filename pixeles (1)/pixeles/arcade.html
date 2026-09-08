@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arcade | PIXELES</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="brand">
+      <a href="index.html" class="brand-link">
+        <h1 class="glitch-title">PIXELES</h1>
+        <span class="tagline">EXPERIENCIA INTEGRADA</span>
+      </a>
+    </div>
+    <div class="user-card-widget" id="card-widget-zone"></div>
+  </header>
+
+  <nav class="tab-menu">
+    <a href="index.html" class="tab-btn"><span class="icon">⌂</span> INICIO</a>
+    <a href="cafe.html" class="tab-btn"><span class="icon">☕</span> CAFETERÍA</a>
+    <a href="manga.html" class="tab-btn"><span class="icon">📖</span> MANGA</a>
+    <a href="arcade.html" class="tab-btn active"><span class="icon">🕹️</span> ARCADE</a>
+  </nav>
+
+  <main class="main-container">
+    <section id="sec-arcade" class="tab-content active">
+      <div class="section-header">
+        <h2>SALÓN ARCADE & SISTEMA DE FIDELIZACIÓN</h2>
+        <p>Compra fichas, juega y canjea tus puntos por recompensas</p>
+      </div>
+
+      <div class="grid-layout">
+        <div class="side-panel">
+          <h3>COMPRA DE FICHAS</h3>
+          <div class="token-pack">
+            <div>
+              <strong>Pack Inicial (5 Fichas)</strong>
+              <p>$1.500 ARS</p>
+            </div>
+            <button onclick="buyTokens(5, 1500)" class="btn-action">COMPRAR</button>
+          </div>
+
+          <div class="token-pack">
+            <div>
+              <strong>Pack PRO (12 Fichas)</strong>
+              <p>$3.000 ARS</p>
+            </div>
+            <button onclick="buyTokens(12, 3000)" class="btn-action">COMPRAR</button>
+          </div>
+
+          <div class="arcade-simulator">
+            <h4>🕹️ SIMULADOR DE MÁQUINA ARCADE</h4>
+            <p>Inserta una ficha virtual para jugar una partida:</p>
+            <button onclick="playArcadeGame()" class="btn-glow large">INSERT COIN (+50 Puntos)</button>
+          </div>
+        </div>
+
+        <div class="side-panel">
+          <h3>CENTRO DE CANJE DE PUNTOS</h3>
+          <div class="reward-list">
+            <div class="reward-item">
+              <div>
+                <strong>1 Café Espresso Gratis</strong>
+                <p>Costo: 300 Puntos</p>
+              </div>
+              <button onclick="redeemReward('Espresso Gratis', 300)" class="btn-sec">CANJEAR</button>
+            </div>
+
+            <div class="reward-item">
+              <div>
+                <strong>1 Alquiler de Manga Gratis</strong>
+                <p>Costo: 200 Puntos</p>
+              </div>
+              <button onclick="redeemReward('Alquiler Manga', 200)" class="btn-sec">CANJEAR</button>
+            </div>
+
+            <div class="reward-item">
+              <div>
+                <strong>Pack 3 Fichas Arcade</strong>
+                <p>Costo: 150 Puntos</p>
+              </div>
+              <button onclick="redeemReward('Pack 3 Fichas', 150)" class="btn-sec">CANJEAR</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="common.js"></script>
+  <script src="arcade.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manga | PIXELES</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="brand">
+      <a href="index.html" class="brand-link">
+        <h1 class="glitch-title">PIXELES</h1>
+        <span class="tagline">EXPERIENCIA INTEGRADA</span>
+      </a>
+    </div>
+    <div class="user-card-widget" id="card-widget-zone"></div>
+  </header>
+
+  <nav class="tab-menu">
+    <a href="index.html" class="tab-btn"><span class="icon">⌂</span> INICIO</a>
+    <a href="cafe.html" class="tab-btn"><span class="icon">☕</span> CAFETERÍA</a>
+    <a href="manga.html" class="tab-btn active"><span class="icon">📖</span> MANGA</a>
+    <a href="arcade.html" class="tab-btn"><span class="icon">🕹️</span> ARCADE</a>
+  </nav>
+
+  <main class="main-container">
+    <section id="sec-manga" class="tab-content active">
+      <div class="section-header">
+        <h2>CATÁLOGO & BIBLIOTECA DE MANGA</h2>
+        <p>Lectura libre en sala o alquiler para llevar a casa</p>
+      </div>
+
+      <div class="search-bar">
+        <input type="text" id="manga-search" placeholder="Buscar por título o género..." onkeyup="filterManga()">
+      </div>
+
+      <div class="manga-catalog" id="manga-grid">
+        <div class="manga-card" data-title="naruto ninja shonen">
+          <div class="manga-badge">DISPONIBLE</div>
+          <h3>Naruto — Tomo 01</h3>
+          <p class="genre">Shonen • Acción</p>
+          <div class="manga-actions">
+            <button onclick="readInRoom('Naruto — Tomo 01')" class="btn-sec">Lectura en Sala (Gratis)</button>
+            <button onclick="rentManga('Naruto — Tomo 01', 500)" class="btn-action">Alquilar ($500 / 150 Pts)</button>
+          </div>
+        </div>
+
+        <div class="manga-card" data-title="one piece aventura shonen">
+          <div class="manga-badge">DISPONIBLE</div>
+          <h3>One Piece — Tomo 100</h3>
+          <p class="genre">Shonen • Aventura</p>
+          <div class="manga-actions">
+            <button onclick="readInRoom('One Piece — Tomo 100')" class="btn-sec">Lectura en Sala (Gratis)</button>
+            <button onclick="rentManga('One Piece — Tomo 100', 500)" class="btn-action">Alquilar ($500 / 150 Pts)</button>
+          </div>
+        </div>
+
+        <div class="manga-card" data-title="berserk fantasia seinen">
+          <div class="manga-badge alert">ÚLTIMO EN SALA</div>
+          <h3>Berserk — Tomo 01</h3>
+          <p class="genre">Seinen • Fantasía Oscura</p>
+          <div class="manga-actions">
+            <button onclick="readInRoom('Berserk — Tomo 01')" class="btn-sec">Lectura en Sala (Gratis)</button>
+            <button onclick="rentManga('Berserk — Tomo 01', 600)" class="btn-action">Alquilar ($600 / 200 Pts)</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="rules-box">
+        <h4>📜 NORMAS DE SALA DE LECTURA</h4>
+        <ul>
+          <li>Devuelve siempre el tomo al estante o carrito de retorno al finalizar.</li>
+          <li>Prohibido manipular páginas con las manos sucias de comida o bebida.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="common.js"></script>
+  <script src="manga.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafetería | PIXELES</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="brand">
+      <a href="index.html" class="brand-link">
+        <h1 class="glitch-title">PIXELES</h1>
+        <span class="tagline">EXPERIENCIA INTEGRADA</span>
+      </a>
+    </div>
+    <div class="user-card-widget" id="card-widget-zone"></div>
+  </header>
+
+  <nav class="tab-menu">
+    <a href="index.html" class="tab-btn"><span class="icon">⌂</span> INICIO</a>
+    <a href="cafe.html" class="tab-btn active"><span class="icon">☕</span> CAFETERÍA</a>
+    <a href="manga.html" class="tab-btn"><span class="icon">📖</span> MANGA</a>
+    <a href="arcade.html" class="tab-btn"><span class="icon">🕹️</span> ARCADE</a>
+  </nav>
+
+  <main class="main-container">
+    <section id="sec-cafe" class="tab-content active">
+      <div class="section-header">
+        <h2>MENÚ TEMÁTICO & GASTRONOMÍA</h2>
+        <p>Alimenta tu energía mientras juegas o lees</p>
+      </div>
+
+      <div class="grid-layout">
+        <div class="catalog-grid">
+          <div class="product-card">
+            <div class="card-tag">BEBIDA</div>
+            <h3>Espresso Gamer</h3>
+            <p>Doble carga de café + Sirope de vainilla e hielos neón.</p>
+            <div class="card-footer">
+              <span class="price">$1.200</span>
+              <button onclick="addToOrder('Espresso Gamer', 1200)" class="btn-action">+ AGREGAR</button>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="card-tag">SNACK</div>
+            <div class="card-tag-warn">⚠️ Usar servilleta antes de leer</div>
+            <h3>Mochi Bento Box</h3>
+            <p>Trilogía de mochis artesanales (Té Verde, Maracuyá y Anko).</p>
+            <div class="card-footer">
+              <span class="price">$2.500</span>
+              <button onclick="addToOrder('Mochi Bento Box', 2500)" class="btn-action">+ AGREGAR</button>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="card-tag">COMBO</div>
+            <h3>Ramen Power-Up</h3>
+            <p>Ramen tradicional + Té helado de durazno.</p>
+            <div class="card-footer">
+              <span class="price">$4.800</span>
+              <button onclick="addToOrder('Ramen Power-Up', 4800)" class="btn-action">+ AGREGAR</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="side-panel">
+          <h3>TU PEDIDO EN BARRA</h3>
+          <div id="cart-items" class="cart-list">
+            <p class="empty-msg">Tu carrito está vacío</p>
+          </div>
+
+          <div class="checkout-summary">
+            <div class="summary-line">
+              <span>Subtotal:</span>
+              <span>$<span id="cart-subtotal">0</span></span>
+            </div>
+
+            <label class="discount-toggle">
+              <input type="checkbox" id="use-points" onchange="updateCartUI()">
+              <span>Canjear 100 Pts (20% OFF)</span>
+            </label>
+
+            <div class="summary-line total">
+              <span>TOTAL:</span>
+              <span class="neon-text">$<span id="cart-total">0</span></span>
+            </div>
+
+            <button onclick="checkoutOrder()" class="btn-primary">CONFIRMAR PEDIDO</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="common.js"></script>
+  <script src="cafe.js"></script>
+</body>
+</html>
